@@ -1,15 +1,15 @@
-// Pega todos os elementos com a classe "ripple" e armazena em "buttons" como um NodeList
+// Pega todos os elementos com a classe "ripple" e armazena em "buttons" (NodeList)
 const buttons = document.querySelectorAll('.ripple')
 
 // Para cada item dentro de buttons
 buttons.forEach(button => {
-  // Adiciona um ouvidor de evetos do tipo "clique" que executa uma função passando o evento (e)
+  // Adiciona um ouvidor de evetos do tipo "clique" que executa uma função passando o evento (event)
   button.addEventListener('click', event => {
-    // Pega as coordenadas X e Y do ponteiro do mouse de onde ocorreu o evento
+    // Pega as coordenadas X e Y do ponteiro do mouse reativo ao viewport do usuário
     const x = event.clientX
     const y = event.clientY
     
-    // Retorna a posição da parte superior (top) e esquerda (left) do elemento
+    // Retorna as coordenadas X e Y da parte superior (top) e esquerda (left) do elemento relativo ao viewport
     const buttonTop = event.target.offsetTop
     const buttonLeft = event.target.offsetLeft
     
@@ -34,7 +34,7 @@ buttons.forEach(button => {
   })
 })
 
-// clientX / clientY:
+// clientX / clientY: São relativos ao canto superior esquerdo da parte visível da página, "visto" através da janela do navegador
 // https://www.w3schools.com/jsref/event_clientx.asp
 
 // offsetTop / offsetLeft:
