@@ -5,7 +5,7 @@ const buttons = document.querySelectorAll('.ripple')
 buttons.forEach(button => {
   // Adiciona um ouvidor de evetos do tipo "clique" que executa uma função passando o evento (event)
   button.addEventListener('click', event => {
-    // Pega as coordenadas X e Y do ponteiro do mouse reativo ao viewport do usuário
+    // Retorna as coordenadas X e Y do ponteiro do mouse reativo ao viewport do usuário
     const x = event.clientX
     const y = event.clientY
     
